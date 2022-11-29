@@ -3,8 +3,13 @@
   "version": "0.0.1",
   "description": "chat real time with express and reactjs",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "name": "https://github.com/valdidev/chat-real-time"
   },
   "keywords": [
     "chat",
@@ -14,5 +19,14 @@
     "js"
   ],
   "author": "Fernando Valdivielso - @valdidev",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
