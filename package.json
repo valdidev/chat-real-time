@@ -1,7 +1,7 @@
 {
   "name": "chat-real-time",
   "version": "0.0.1",
-  "description": "chat real time with express and reactjs",
+  "description": "chat real time with express, socket.io and reactjs",
   "main": "index.js",
   "type": "module",
   "scripts": {
