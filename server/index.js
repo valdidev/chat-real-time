@@ -7,9 +7,18 @@ import { PORT } from './config.js';
 
 const app = express();
 const server = http.createServer(app);
-const io = new SockerServer(server);
+const io = new SockerServer(server, {
+    cors: {
+        origin: '*'
+    }
+});
 
 app.use(cors());
 app.use(morgan('dev'));
 
-app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
+io.on('connection', (socket) => {
+    console.log(socket.id)
+    console.log('a user connected');
+});
+
+server.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
